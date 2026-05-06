@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" --> 
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Continual Speaker Identity Unlearning with Minimal Interference">
+  <meta property="og:title" content="Continual Speaker Identity Unlearning with Minimal Interference"/>
+  <!-- <meta property="og:description" content="In this paper, we introduce the first machine unlearning framework for ZS-TTS, Speaker Identity Unlearning (TGU), designed to ensure that the model forgets designated speaker identities while retaining its ability to generate accurate speech for other speakers. Unlike conventional unlearning methods, TGU leverages randomness to prevent consistent replication of forget speakers' voices, ensuring unlearned identities remain untraceable. Additionally, we propose a new evaluation metric, speaker-Zero Retrain Forgetting (spk-ZRF), which measures the model’s effectiveness in preventing the reproduction of forgotten voices. The experiments conducted on the state-of-the-art model demonstrate that TGU prevents the model from replicating forget speakers' voices while maintaining high quality for other speakers."/> -->
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Continual Speaker Identity Unlearning with Minimal Interference">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- <meta name="twitter:image" content="static/images/Figure1_Final.png"> -->
+  <!-- <meta name="twitter:card" content="summary_large_image"> -->
+  <!-- Keywords for your paper to be indexed by-->
+  <!-- <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Continual Speaker Identity Unlearning with Minimal Interference</title>
+<!--  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">-->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+    <!-- Include Bulma CSS -->
+<!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css">-->
+  <!-- Include Bulma Carousel CSS -->
+<!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.0/dist/css/bulma-carousel.min.css">-->
+
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+
+
+  <style>
+
+    .small-audio {
+      width: 120px; /* Adjust width to make it smaller */
+      height: 30px; /* Adjust height */
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .small-audio::-webkit-media-controls {
+      background-color: #f5f5f5; /* Change background color to match the design */
+    }
+
+    .small-audio::-webkit-media-controls-panel {
+      background-color: #f5f5f5; /* Panel background color */
+    }
+
+  </style>
+
+  <style>
+    /* Custom styles for the table and audio controls */
+    table {
+      width: 100%; /* Ensure the table takes the full width */
+      background-color: white;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border: none; /* Explicitly remove any outer border */
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd; /* Add vertical borders between columns */
+    }
+
+    thead, tbody {
+      border: none !important; /* Ensure no borders in the header or body */
+    }
+
+    /* Add a bold border under the header row */
+    th {
+      font-weight: bold;
+      border-bottom: 2px solid #333; /* Add a border under the header */
+    }
+
+    /* Add a border between each row */
+    tr {
+      border-bottom: 1px solid #ddd; /* Add a lighter border between rows */
+    }
+
+    td {
+      border: none !important; /* Ensure no borders in table cells */
+    }
+    .audio-controls {
+      display: inline-block;
+      width: 120px; /* Adjust this width for smaller or larger controls */
+      border-radius: 20px; /* Rounded corners */
+      background-color: #f4f4f4; /* Background color to match the design */
+      padding: 5px;
+    }
+    .audio-controls audio {
+      width: 100%;
+    }
+    .table-container {
+      background-color: white; /* Optional: For the white background */
+      box-shadow: none; /* Optional: To add the shadow effect */
+      border: 1px solid #A9B3BE;
+      padding: 25px;
+      border-radius: 6px; /* For rounded corners */
+    }
+    td[rowspan] {
+      vertical-align: middle;
+      border-bottom: 2px solid #ddd;
+    }
+    .carousel {
+      padding: 20px; /* Space around the carousel items */
+      overflow: visible; /* Ensure no clipping of shadows */
+    }
+    .carousel-container {
+      position: relative;
+      padding: 40px 20px; /* Ensure enough padding for top and bottom shadows */
+      background-color: #d9d9d9;
+      overflow: visible; /* Ensure no clipping of shadows */
+    }
+    .carousel-item {
+      margin-right: 15px; /* Adjust this value to add more or less space between slides */
+      margin-left: 15pk;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the carousel items */
+      border-radius: 10px; /* To match the rounded style */
+      background-color: white; /* Background of the table should be white */
+      overflow: visible !important;
+      min-width: 100%; /* Ensures the slide takes up full width */
+    }
+    .carousel .carousel-item {
+      margin: 10px;
+      overflow: visible !important; /* Ensure shadows are not clipped between slides */
+    }
+
+    .bulma-carousel .carousel-bullet {
+      width: 8px;
+      height: 8px;
+      margin: 0 3px;        /* Adjust spacing */
+      border-radius: 50%;   /* Make perfect circles */
+    }
+
+    /* Optionally, style the "active" bullet differently */
+    .bulma-carousel .carousel-bullet.is-active {
+      width: 10px;
+      height: 10px;
+    }
+
+
+    .table-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    /* Text and Font Styles */
+    .paragraph {
+      font-size: 1.25rem;
+      font-weight: 400; /* Normal weight */
+      color: #4D545E; /* Lighter grey color for text */
+      line-height: 1.5; /* Space between lines */
+    }
+
+    .table-explanation {
+      font-size: 1rem;        /* Adjust font size */
+      color: #4D545E;         /* Darker grey color for paragraph */
+      line-height: 1.5;       /* Space between lines */
+      margin-top: 20px;       /* Add margin to separate from the table */
+      text-align: left;       /* Align text to the left for better readability */
+      max-width: 800px;       /* Optional: limit the width for better layout */
+    }
+
+    .highlight {
+      background-color: #D9F2D0;
+      /* optional: padding, border-radius, etc. */
+    }
+  </style>
+
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Continual Speaker Identity Unlearning with Minimal Interference</h1>
+
+            <!-- <div class="is-size-6 publication-authors">
+
+                </div>
+              </div> -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Under Submission</span>
+              </div>
+                 <div class="column has-text-centered">
+                   <div class="publication-links">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            abstract
+          </p>
+<!--          <img src="static/images/Figure1_Final.png" alt="A descriptive caption" style="max-width:100%; height:auto;">-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+    <section class="section">
+    <div class="container">
+      <div class="content" style="max-width: 600px; margin-left: 3rem;">
+      <h1 class="title is-2 mb-4">Demo Overview</h1>
+      <p class="mb-6">
+        This page provides samples of our approach on various
+        “Forget Speaker” scenarios. Below, you will find
+        audio prompts, ground truth references, and
+        outputs of our unlearning models.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="content" style="max-width: 600px; margin-left: 3rem;">
+      <h1 class="title is-3 mb-4">Our Methods on Forget Speakers</h1>
+      <p class="mb-6">
+        Our methods effectively remove specific speakers from being generated with Zero-Shot Text-to-Speech models,
+        even under continual unlearning scenarios. 
+      </p>
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{
+          cortis2026,
+          title={Continual Speaker Identity Unlearning with Minimal Interference},
+          author={Anonymous Authors},
+          booktitle={Under Submission},
+          year={2026}
+        }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      bulmaCarousel.attach('#carousel-demo', {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        loop: true,
+        autoplay: false, // Set to true if you want it to autoplay
+        duration: 300, // Speed of the transition
+      });
+    });
+  </script>
+
+  </body>
+  </html>

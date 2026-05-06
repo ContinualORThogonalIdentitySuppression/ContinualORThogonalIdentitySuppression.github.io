@@ -198,24 +198,46 @@
 
 
   <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            Continual Speaker Identity Unlearning with Minimal Interference
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Authors</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <div><small>Affiliations withheld for double-blind review</small></div>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Under Submission</span>
+          </div>
+
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Continual Speaker Identity Unlearning with Minimal Interference</h1>
+            <div class="publication-links">
+              <!-- Paper (disabled placeholder) -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper (coming soon)</span>
+                </a>
+              </span>
 
-            <!-- <div class="is-size-6 publication-authors">
-
-                </div>
-              </div> -->
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">Under Submission</span>
-              </div>
-                 <div class="column has-text-centered">
-                   <div class="publication-links">
-
+              <!-- Code (disabled placeholder) -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code (coming soon)</span>
+                </a>
+              </span>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -223,7 +245,7 @@
 </section>
 
 
-<!-- Paper abstract -->
+<!-- Abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -231,37 +253,47 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            abstract
+            Machine unlearning removes designated concepts or memorized data from
+            pre-trained models. Recent work has made strong progress on speaker
+            identity unlearning in zero-shot text-to-speech (ZS-TTS), but quietly
+            assumes all unlearning requests arrive at once — an unrealistic
+            assumption, since privacy-motivated removals arrive sequentially over time.
+            We show this assumption breaks state-of-the-art methods: unlearning each
+            new speaker fully revives previously unlearned speakers, reintroducing
+            the very privacy risk unlearning was meant to eliminate. We present
+            <strong>CORTIS</strong> (<strong>C</strong>umulative
+            <strong>ORT</strong>hogonal <strong>I</strong>dentity
+            <strong>S</strong>uppression), the first framework for continual speaker
+            identity unlearning in ZS-TTS that requires no access to previously
+            unlearned speaker data. CORTIS combines Fisher-information-based
+            parameter masking with orthogonal projection against subspaces spanned
+            by prior unlearning updates. On VoiceBox, CORTIS unlearns each requested
+            speaker while keeping previously unlearned speakers forgotten across
+            long request sequences, substantially outperforming sequential
+            application of prior methods.
           </p>
-<!--          <img src="static/images/Figure1_Final.png" alt="A descriptive caption" style="max-width:100%; height:auto;">-->
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
 
 
 
-    <section class="section">
-    <div class="container">
-      <div class="content" style="max-width: 600px; margin-left: 3rem;">
-      <h1 class="title is-2 mb-4">Demo Overview</h1>
-      <p class="mb-6">
-        This page provides samples of our approach on various
-        “Forget Speaker” scenarios. Below, you will find
-        audio prompts, ground truth references, and
-        outputs of our unlearning models.
+
+
+<!-- Demo / Audio Samples (placeholder) -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content has-text-centered">
+      <h2 class="title is-3">Audio Demonstrations</h2>
+      <p style="color: #4D545E;">
+        Audio samples comparing CORTIS against baselines on forgotten and remained
+        speakers across sequential unlearning requests are coming soon.
       </p>
     </div>
-
-    <div class="container">
-      <div class="content" style="max-width: 600px; margin-left: 3rem;">
-      <h1 class="title is-3 mb-4">Our Methods on Forget Speakers</h1>
-      <p class="mb-6">
-        Our methods effectively remove specific speakers from being generated with Zero-Shot Text-to-Speech models,
-        even under continual unlearning scenarios. 
-      </p>
+  </div>
+</section>
 
 
 <!--BibTex citation -->

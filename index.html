@@ -295,6 +295,289 @@
   </div>
 </section>
 
+ <!-- <section class="section">
+    <div class="container">
+      <div class="content" style="max-width: 600px; margin-left: 3rem;">
+      <h1 class="title is-3 mb-4">Our Methods on Remain Speakers</h1>
+      <p class="mb-6">
+        Our method prevents synthesis of Forget Speakers voices even across continual unlearning phases.
+      </p>
+     <!-- <h3 class="subtitle is-5" style="margin-left: 3rem;">Model Pre-trained on LibriHeavy</h3> -->
+    </div>
+    <div class="container">
+
+      <!-- Carousel container -->
+      <div id="carousel-demo" class="carousel">
+
+        <!-- First Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">After 5 Continual Unlearn Requests</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Unlearn Speaker</th>
+                    <th>Target Text</th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Forget</th>
+                    <th>CORTIS (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="3">TEXT PROMPT</td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/source.wav" type="audio/wav"></audio></td>
+                    <td rowspan="3"><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/SGU_0.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/TGU_0.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/SGU_1.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/TGU_1.wav" type="audio/wav"></audio></td>
+                  </tr>
+                  <tr>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/SGU_2.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/LibriTTS_forget_speakers/4/TGU_2.wav" type="audio/wav"></audio></td>
+                    </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div> -->
+
+        <!-- Second Slide -->
+        <!-- <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker 2</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Remain</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>...and towards Christmas, he was one of the first that was cut down.</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div> -->
+
+        <!-- Third Slide -->
+        <!-- <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker 3</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Remain</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Other circumstances permitting, that instinct disposes men to look with favor upon productive efficiency and on whatever is of human use.</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div> -->
+        <!-- Fourth Slide -->
+        <!-- <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker 4</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Remain</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>He darted like an arrow through all the halls, down all the stairs, and across the yard.</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+      <div class="content" style="max-width: 600px; margin-left: 3rem;">
+      <h1 class="title is-3 mb-4">Our Methods on Remain Speakers</h1>
+      <p class="mb-6">
+        While our methods effectively prevent synthesis of Forget Speakers voices,
+        it succeeds to retain the Zero-Shot performance for all other Remain Speakers.
+        Here, the Remain Speakers are unseen voices from LibriSpeech tested in Zero-Shot setting.
+      </p>
+     <!-- <h3 class="subtitle is-5" style="margin-left: 3rem;">Model Pre-trained on LibriHeavy</h3> -->
+    </div>
+    <div class="container">
+
+      <!-- Carousel container -->
+      <div id="carousel-demo" class="carousel">
+
+        <!-- First Slide -->
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker #61</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Remain</th>
+                    <th>CORTIS (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>We will go out together... .</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/unlearn_five/remain/61/cortis.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/1/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/unlearn_five/remain/61/cortis.wav" type="audio/wav"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+        <!-- Second Slide
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker 2</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Remain</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>...and towards Christmas, he was one of the first that was cut down.</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/2/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+
+        Third Slide
+        <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker 3</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Remain</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Other circumstances permitting, that instinct disposes men to look with favor upon productive efficiency and on whatever is of human use.</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/3/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div>
+        <!-- Fourth Slide -->
+        <!-- <div class="carousel-item">
+          <div class="table-container">
+            <h2 class="table-title">LibriSpeech Remain Speaker 4</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Target Text</th>
+                    <th>*Audio Prompt</th>
+                    <th>*Sample to Remain</th>
+                    <th>SGU (Ours)</th>
+                    <th>TGU (Ours)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>He darted like an arrow through all the halls, down all the stairs, and across the yard.</td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/source.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/ground_truth.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/RL.wav" type="audio/wav"></audio></td>
+                    <td><audio class="small-audio" controls><source src="static/audios/remain_speakers/4/TGU.wav" type="audio/wav"></audio></td>
+                  </tr>
+                </tbody>
+              </table>
+            <p class="table-explanation">
+              *An actual audio file spoken by Remain Speaker, but not seen during training or unlearning process.
+            </p>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+  </section>
+
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
